@@ -20,7 +20,7 @@ struct ImageProductView: View {
         ZStack {
             color
                 .cornerRadius(29)
-                .frame(width: 180, height: 180)
+                .frame(width: 160, height: 160)
             Image(product.image)
                 .resizable()
                 .scaledToFit()
@@ -34,5 +34,5 @@ struct ImageProductView: View {
 
 #Preview {
     ImageProductView(product: products[0])
-        .previewLayout(.fixed(width: 200, height: 200))
+        .previewLayout(.fixed(width: 160, height: 160))
 }
