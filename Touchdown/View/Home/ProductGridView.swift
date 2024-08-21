@@ -1,20 +1,18 @@
 //
-//  ProductView.swift
+//  ProductGridView.swift
 //  Touchdown
 //
-//  Created by Ricardo Sousa on 19/08/2024.
+//  Created by Ricardo Sousa on 20/08/2024.
 //
 
 import SwiftUI
 
-struct ProductView: View {
-    
-    
+struct ProductGridView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    ProductView()
+    ProductGridView()
 }
