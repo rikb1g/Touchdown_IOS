@@ -26,11 +26,24 @@ struct ContentView: View {
                             .frame(height: UIScreen.main.bounds.width / 1.45)
                             .padding(.vertical, 20)
                         
-                        ScrollView(.horizontal,showsIndicators: false,content: {
+                        
                             CategoryGridView()
                             
-                        }) //: Scroll View
-                            
+                        
+                            TitleView(title: "Helmets")
+                       
+                        
+                        //: PRODUCT VIEW
+                        ProductGridView()
+                        
+                        
+                        //: BRANDS
+                        
+                        TitleView(title: "Brands")
+                        
+                        BrandGridView()
+                        
+                        //: FOOTERVIEW
                         FooterView()
                             .padding()
                     }

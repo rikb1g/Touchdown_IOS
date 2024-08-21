@@ -14,25 +14,39 @@ struct ImageProductView: View {
     
     
     
-    
+    // MARK: - BODY
     var body: some View {
-        let color = Color(UIColor(red:product.color[0],green: product.color[1],blue: product.color[2], alpha: 1.0))
-        ZStack {
-            color
-                .cornerRadius(29)
-                .frame(width: 160, height: 160)
-            Image(product.image)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 160,height: 160)
-        } //: ZSTACK
         
+        VStack(alignment: .leading,spacing: 6, content: {
+            // PHOTO
+            ZStack{
+                Image(product.image)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(10)
+            }//: ZSTACK
+            .background(Color(red: product.red, green: product.green, blue: product.blue))
+            .cornerRadius(12)
+            
+            // NAME
+            Text(product.name)
+                .font(.title3)
+                .fontWeight(.black)
+            
+            //PRICE
+            Text(product.formattedPrice)
+                .fontWeight(.semibold)
+                .foregroundColor(.gray)
+            
+            
+        }) //: VSTACK
     }
 }
 
 
-
 #Preview {
     ImageProductView(product: products[0])
-        .previewLayout(.fixed(width: 160, height: 160))
+        .previewLayout(.fixed(width: 200, height: 300))
+        .padding()
+        .background(colorBackground)
 }

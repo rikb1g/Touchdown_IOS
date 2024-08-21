@@ -15,4 +15,10 @@ struct Product: Codable, Identifiable {
     let price: Double
     let description: String
     let color: [CGFloat]
+    
+    var red: Double {return color[0]}
+    var green: Double {return color[1]}
+    var blue: Double {return color[2]}
+    
+    var formattedPrice: String { return String(format: "%.2f €", price)}
 }

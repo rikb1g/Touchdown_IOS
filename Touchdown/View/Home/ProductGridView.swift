@@ -9,10 +9,25 @@ import SwiftUI
 
 struct ProductGridView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        
+        LazyVGrid(columns: gridLayout,alignment: .center,spacing: columnSpacing, content: {
+            
+            
+            
+            ForEach(products) { product in
+                ImageProductView(product: product)
+            }
+        })
+                  }
+    } //: SCROLL
+
 
 #Preview {
     ProductGridView()
+        .previewLayout(.sizeThatFits)
+        .padding()
+        .background(colorBackground)
 }
+
+
+//:
